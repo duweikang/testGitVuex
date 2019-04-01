@@ -1,0 +1,62 @@
+.avtiveWrap{
+    padding: 20px 0;
+    background: #e6e6e6;
+}
+.avtiveWrap .avtiveBox .topItem{
+    width: 1000px;
+    height: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.avtiveWrap .ivu-collapse{
+    border: none !important;
+    background: #e6e6e6 !important;
+}
+.avtiveWrap .ivu-collapse>.ivu-collapse-item>.ivu-collapse-header{
+    height: 200px !important;
+    padding-left: 0 !important;
+}
+.avtiveWrap .ivu-collapse>.ivu-collapse-item{
+    margin-bottom: 10px !important;
+    box-shadow: 0 3px 6px #ccc;
+    background: #fff;
+}
+.avtiveWrap .avtiveBox .topItem .topItemCon{
+    width: 970px;
+    height: 170px;
+    position: relative;
+}
+.avtiveWrap .avtiveBox .topItem .topItemCon .left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 680px;
+    height: 170px;
+}
+.avtiveWrap .avtiveBox .topItem .topItemCon .left img{
+    display: block;
+    width: 680px;
+    height: 170px;
+}
+.avtiveWrap .avtiveBox .topItem .topItemCon .right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 290px;
+    height: 170px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.avtiveWrap .avtiveBox .topItem .topItemCon .right .activeTitle{
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #548DD4;
+}
+.avtiveWrap .avtiveBox .topItem .topItemCon .right .activeTime{
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #333;
+}

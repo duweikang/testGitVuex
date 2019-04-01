@@ -43,7 +43,7 @@
             <MenuItem name="active">
               <Icon type="md-outlet"/>活动中心
             </MenuItem>
-            <MenuItem name="agentAbout">
+            <MenuItem name="agent">
               <Icon type="md-people"/>代理合作
             </MenuItem>
             <MenuItem name="phone">
@@ -72,6 +72,7 @@ export default {
   },
   mounted () {
     console.log(this.$route)
+    this.actiMenu = this.$route.name
   },
   methods: {
     ...mapActions(['changeLoginStateActions']),

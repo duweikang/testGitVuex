@@ -1,5 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import home from '@/components/pages/home'
+import hall from '@/components/pages/hall'
+import active from '@/components/pages/active'
+import phone from '@/components/pages/phone'
+import agent from '@/components/pages/agent'
+import guide from '@/components/pages/guide'
 
 Vue.use(Router)
 
@@ -14,64 +20,32 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: () => import('@/components/pages/home')
+      component: home
     },
     {
       path: '/hall',
       name: 'hall',
-      component: () => import('@/components/pages/hall')
+      component: hall
     },
     {
       path: '/active',
       name: 'active',
-      component: () => import('@/components/pages/active')
-    },
-    {
-      path: '/agent',
-      name: 'agent',
-      component: () => import('@/components/pages/agent'),
-      children: [
-        {
-          path: 'agentAbout',
-          name: 'agentAbout',
-          component: () => import('@/components/pages/agent/about')
-        },
-        {
-          path: 'agentConnect',
-          name: 'agentConnect',
-          component: () => import('@/components/pages/agent/connect')
-        },
-        {
-          path: 'agentBusiness',
-          name: 'agentBusiness',
-          component: () => import('@/components/pages/agent/business')
-        },
-        {
-          path: 'agentLaw',
-          name: 'agentLaw',
-          component: () => import('@/components/pages/agent/law')
-        },
-        {
-          path: 'agentPrivacy',
-          name: 'agentPrivacy',
-          component: () => import('@/components/pages/agent/privacy')
-        },
-        {
-          path: 'agentTeamwork',
-          name: 'agentTeamwork',
-          component: () => import('@/components/pages/agent/teamwork')
-        }
-      ]
+      component: active
     },
     {
       path: '/phone',
       name: 'phone',
-      component: () => import('@/components/pages/phone')
+      component: phone
+    },
+    {
+      path: '/agent',
+      name: 'agent',
+      component: agent
     },
     {
       path: '/guide',
       name: 'guide',
-      component: () => import('@/components/pages/guide')
+      component: guide
     }
   ]
 })
