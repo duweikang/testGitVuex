@@ -69,8 +69,8 @@ export default new Router({
       component: () => import('@/components/pages/phone')
     },
     {
-      path: '/guide/:id',
-      name: 'guide/:id',
+      path: '/guide',
+      name: 'guide',
       component: () => import('@/components/pages/guide')
     }
   ]

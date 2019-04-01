@@ -6,7 +6,7 @@
           <div class="leftMenu">
             <div class="menuTitle">代理合作</div>
             <div class="slideNav">
-              <Menu mode="vertical" width="200px" active-name="agentAbout" @on-select="gotoRoute">
+              <Menu mode="vertical" width="200px" active-name="currentMenu" @on-select="gotoRoute">
                 <MenuItem name="agentAbout">
                   <Icon type="md-contacts" />关于我们
                 </MenuItem>
@@ -50,9 +50,15 @@ export default {
   },
   methods: {
     gotoRoute (name) {
-      console.log(this.$route.name)
       this.$router.push({name: name})
+    },
+    watchRoute () {
+      this.currentMenu = this.$route.name
+      console.log(this.currentMenu)
     }
+  },
+  watch: {
+    $route: 'watchRoute'
   }
 }
 </script>

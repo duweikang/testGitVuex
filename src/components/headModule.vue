@@ -33,23 +33,23 @@
     <div class="wrap headBottom">
       <div class="container">
         <div class="headBottomCon">
-          <Menu mode="horizontal" active-name="home" @on-select="gotoRoute">
-            <MenuItem name="/home">
+          <Menu mode="horizontal" :active-name="actiMenu" @on-select="gotoRoute">
+            <MenuItem name="home">
               <Icon type="md-square"/>首页
             </MenuItem>
-            <MenuItem name="/hall">
+            <MenuItem name="hall">
               <Icon type="md-star"/>购彩大厅
             </MenuItem>
-            <MenuItem name="/active">
+            <MenuItem name="active">
               <Icon type="md-outlet"/>活动中心
             </MenuItem>
-            <MenuItem name="/agent/agentAbout">
+            <MenuItem name="agentAbout">
               <Icon type="md-people"/>代理合作
             </MenuItem>
-            <MenuItem name="/phone">
+            <MenuItem name="phone">
               <Icon type="md-phone-portrait"/>手机购彩
             </MenuItem>
-            <MenuItem name="/guide">
+            <MenuItem name="guide">
               <Icon type="md-help-circle" />帮助指南
             </MenuItem>
           </Menu>
@@ -70,13 +70,17 @@ export default {
   computed: {
     ...mapState(['islogin'])
   },
+  mounted () {
+    console.log(this.$route)
+  },
   methods: {
     ...mapActions(['changeLoginStateActions']),
     loginOrLeave () {
       this.changeStateAction(!this.islogin)
     },
     gotoRoute (name) {
-      this.$router.push({path: name})
+      this.actiMenu = name
+      this.$router.push({name: name})
     }
   }
 }
@@ -185,6 +189,6 @@ export default {
   .ivu-menu-light.ivu-menu-horizontal
   .ivu-menu-submenu:hover {
   border-bottom: none;
-  background: #ca1a0d;
+  background: #ad1d12;
 }
 </style>
