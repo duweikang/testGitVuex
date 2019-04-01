@@ -1,0 +1,71 @@
+.twoColBoxWrap{
+    padding: 20px 0;
+    background: #e6e6e6;
+}
+.twoColBox{
+    overflow: hidden;
+}
+.twoColBox .leftMenu{
+    width: 200px;
+    float: left;
+    min-height: 500px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.twoColBox .rightCon{
+    float: right;
+    width: 780px;
+    min-height: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.twoColBox .leftMenu .menuTitle{
+    background-color: #e4393c;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+    margin: 0;
+}
+.twoColBox .leftMenu .menuUl{
+    background: #fff;
+}
+.twoColBox .leftMenu .menuUl li {
+    border-top: 1px solid #eff0f1;
+    line-height: 35px;
+    font-size: 14px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+.twoColBox .leftMenu .menuUl li.acti {
+    border-left: 3px solid #e4393c;
+    color: #e4393c;
+}
+
+/*二级路由*/
+.moduleCon{
+
+}
+.moduleCon>h4 {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #fce1e6;
+    color: #333;
+    margin: 0;
+    font-weight: 700;
+}
+.moduleCon .moduleBody{
+    margin-top: 15px;
+}
+.moduleCon .moduleBody p{
+    font-size: 14px;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+.moduleCon .moduleBody p.strong{
+    font-weight: 600;
+}
