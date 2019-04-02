@@ -73,22 +73,25 @@
 </template>
 
 <script>
+import { getActives } from '@/api/active'
 export default {
   name: 'active',
   data () {
     return {
-      value: []
+      value: [],
+      params: {}
     }
   },
   mounted () {
-    this.$post('web/getActivityId')
-      .then((response) => {
-        console.log(response)
-      })
+    getActives(this.params).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
   }
 }
 </script>
 
 <style>
-@import '../../assets/style/active.css';
+@import "../../assets/style/active.css";
 </style>
