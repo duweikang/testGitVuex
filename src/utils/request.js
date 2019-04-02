@@ -12,7 +12,7 @@ service.interceptors.request.use(
     return config
   },
   error => {
-    console.log(error) // for debug
+    console.log('error:' + error) // for debug
     Promise.reject(error)
   }
 )
@@ -23,7 +23,7 @@ service.interceptors.response.use(
     return response
   },
   error => {
-    console.log('err' + error) // for debug
+    console.log('error:' + error) // for debug
     return Promise.reject(error)
   }
 )
