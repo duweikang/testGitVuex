@@ -6,6 +6,12 @@ import router from './router'
 import store from './store'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import {post, fetch, patch, put} from './utils/http'
+// 定义全局变量
+Vue.prototype.$post = post
+Vue.prototype.$fetch = fetch
+Vue.prototype.$patch = patch
+Vue.prototype.$put = put
 
 Vue.use(iView)
 Vue.config.productionTip = false

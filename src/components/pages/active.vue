@@ -79,6 +79,12 @@ export default {
     return {
       value: []
     }
+  },
+  mounted () {
+    this.$post('web/getActivityId')
+      .then((response) => {
+        console.log(response)
+      })
   }
 }
 </script>
