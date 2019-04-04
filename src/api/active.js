@@ -1,4 +1,5 @@
 import request from '@/utils/request'
+import qs from 'qs'
 
 export function getActives (params) {
   return request({
@@ -8,6 +9,13 @@ export function getActives (params) {
   })
 }
 
+export function getActiveCon (data) {
+  return request({
+    url: 'web/getNewActivityById',
+    method: 'post',
+    data: qs.stringify(data)
+  })
+}
 // post
 export function aaa (data) {
   return request({
